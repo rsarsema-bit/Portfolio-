@@ -162,12 +162,14 @@ nav {
 /* ===== PROJECTS SECTION ===== */
 .projects {
   text-align: center;
-  padding: 100px;
+  padding: 80px;
+  margin-top:100px;
 }
 
 .projects h2 {
   color: #38bdf8;
   margin-bottom: 40px;
+  
 }
 
 .project-container {
