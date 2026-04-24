@@ -1,8 +1,4 @@
-
-
-
- 
-  /* ===== GLOBAL ===== */
+/* ===== GLOBAL ===== */
 
 * {
   margin: 0;
@@ -283,8 +279,7 @@ footer {
   cursor: pointer;
 }
 
-/* ===== RESPONSIVE ===== */
-
+/* MOBILE NAV */
 @media (max-width: 768px) {
 
   .hero-content {
@@ -315,10 +310,12 @@ footer {
     padding: 10px 20px;
   }
 
+  /* SHOW HAMBURGER */
   .menu-btn {
     display: block;
   }
 
+  /* HIDE NAV LINKS BY DEFAULT */
   .nav-links {
     display: none;
     position: absolute;
@@ -334,6 +331,7 @@ footer {
     border-bottom: 1px solid rgba(56, 189, 248, 0.2);
   }
 
+  /* SHOW WHEN CLICKED */
   #menu-toggle:checked ~ .nav-links {
     display: flex;
   }
@@ -357,7 +355,7 @@ footer {
   }
 }
 
-/* Small phones */
+/* SMALL PHONES */
 @media (max-width: 480px) {
 
   .hero-text h1 {
