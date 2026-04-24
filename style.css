@@ -738,7 +738,9 @@ footer {
   .hero-text h1 {
     font-size: 40px;
   }
- 
+  /* Add this inside your @media (max-width: 768px) block */
+
+  /* 1. Show the hamburger icon */
   .menu-btn {
     display: block;
     font-size: 30px;
@@ -747,13 +749,14 @@ footer {
     z-index: 1001;
   }
 
-  
+  /* 2. Hide the links by default and style them as a mobile dropdown */
+  .nav-links {
     display: none; 
     position: absolute;
-    top: 100%; 
+    top: 100%; /* Sits right below the nav bar */
     left: 0;
     width: 100%;
-    background: rgba(2, 6, 23, 0.95); 
+    background: rgba(2, 6, 23, 0.95); /* Matches your nav color */
     flex-direction: column;
     padding: 20px 0;
     text-align: center;
@@ -762,21 +765,24 @@ footer {
     border-bottom: 1px solid rgba(56, 189, 248, 0.2);
   }
 
-  
+  /* 3. THE MAGIC: When the checkbox is clicked, show the links */
   #menu-toggle:checked ~ .nav-links {
     display: flex;
   }
 
-  
+  /* 4. Hide the actual checkbox so it doesn't look ugly */
+  #menu-toggle {
     display: none;
   }
   
-  
+  /* 5. Fix background for mobile visibility */
   body {
     background-attachment: scroll !important;
   }
 }
+/* Add this inside your @media (max-width: 768px) block */
 
+  /* 1. Show the hamburger icon */
   .menu-btn {
     display: block;
     font-size: 30px;
@@ -785,14 +791,14 @@ footer {
     z-index: 1001;
   }
 
-  
+  /* 2. Hide the links by default and style them as a mobile dropdown */
   .nav-links {
     display: none; 
     position: absolute;
-    top: 100%;
+    top: 100%; /* Sits right below the nav bar */
     left: 0;
     width: 100%;
-    background: rgba(2, 6, 23, 0.95); 
+    background: rgba(2, 6, 23, 0.95); /* Matches your nav color */
     flex-direction: column;
     padding: 20px 0;
     text-align: center;
@@ -801,20 +807,22 @@ footer {
     border-bottom: 1px solid rgba(56, 189, 248, 0.2);
   }
 
-  
+  /* 3. THE MAGIC: When the checkbox is clicked, show the links */
   #menu-toggle:checked ~ .nav-links {
     display: flex;
   }
 
-  
+  /* 4. Hide the actual checkbox so it doesn't look ugly */
   #menu-toggle {
     display: none;
   }
   
- 
+  /* 5. Fix background for mobile visibility */
   body {
     background-attachment: scroll !important;
-  }
+  }/* Add this inside your @media (max-width: 768px) block */
+
+  /* 1. Show the hamburger icon */
   .menu-btn {
     display: block;
     font-size: 30px;
@@ -823,14 +831,14 @@ footer {
     z-index: 1001;
   }
 
-  
+  /* 2. Hide the links by default and style them as a mobile dropdown */
   .nav-links {
     display: none; 
     position: absolute;
-    top: 100%;
+    top: 100%; /* Sits right below the nav bar */
     left: 0;
     width: 100%;
-    background: rgba(2, 6, 23, 0.95);
+    background: rgba(2, 6, 23, 0.95); /* Matches your nav color */
     flex-direction: column;
     padding: 20px 0;
     text-align: center;
@@ -839,17 +847,17 @@ footer {
     border-bottom: 1px solid rgba(56, 189, 248, 0.2);
   }
 
-  
+  /* 3. THE MAGIC: When the checkbox is clicked, show the links */
   #menu-toggle:checked ~ .nav-links {
     display: flex;
   }
 
- 
+  /* 4. Hide the actual checkbox so it doesn't look ugly */
   #menu-toggle {
     display: none;
   }
   
-  
+  /* 5. Fix background for mobile visibility */
   body {
     background-attachment: scroll !important;
   }
