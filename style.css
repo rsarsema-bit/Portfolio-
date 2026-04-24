@@ -7,11 +7,8 @@
 
 * {
   margin: 0;
-
   padding: 0;
-
   box-sizing: border-box;
-
   font-family: "Segoe UI", sans-serif;
 }
 
@@ -21,21 +18,16 @@ html {
 
 body {
   background: url("https://images.freecreatives.com/wp-content/uploads/2016/02/Amazing-Free-Navy-Blue-Texture-Background.jpg");
-
   background-position: center;
-
   background-attachment: fixed;
-
   color: #fef9f9;
-
   line-height: 1.6;
 }
 
 /* ===== GLOBAL SECTION SPACING ===== */
 
 section {
-  padding: 100px 5%; /* Using percentage for better side spacing */
-
+  padding: 100px 5%;
   scroll-margin-top: 80px;
 }
 
@@ -43,90 +35,66 @@ section {
 
 nav {
   display: flex;
-
   justify-content: space-between;
-
   align-items: center;
-
   padding: 15px 50px;
-
   background: rgba(2, 6, 23, 0.7);
-
   backdrop-filter: blur(15px);
-
   -webkit-backdrop-filter: blur(15px);
-
   position: sticky;
-
   top: 0;
-
   z-index: 1000;
-
   border-bottom: 1px solid rgba(56, 189, 248, 0.2);
 }
 
 .logo {
   font-family: "Monotype Corsiva", "Apple Chancery", cursive;
-
   font-size: 28px;
-
   font-weight: bold;
-
   color: #ffffff;
-
   text-shadow: 0 0 10px rgba(56, 189, 248, 0.4);
 }
 
 .nav-links {
   display: flex;
-
   gap: 35px;
 }
 
 .nav-links a {
   text-decoration: none;
-
   color: #cbd5f5;
-
   font-weight: 500;
-
   transition: all 0.3s ease;
 }
 
 .nav-links a:hover {
   color: #38bdf8;
-
   transform: translateY(-2px);
 }
 
-/* ===== HOME / HERO SECTION (Profile on Left) ===== */
+/* ===== HOME ===== */
 
 .hero-content {
   display: flex;
-
   align-items: center;
-
-  justify-content: flex-start; /* Pushes content to the left */
-
+  justify-content: flex-start;
   gap: 60px;
-
   min-height: 80vh;
 }
 
 .profile-img {
   width: 350px;
-
   height: 350px;
-
   border-radius: 50%;
-
   border: 4px solid #38bdf8;
-
   box-shadow: 0 0 30px rgba(56, 189, 248, 0.3);
-
   object-fit: cover;
+  flex-shrink: 0;
+}
 
-  flex-shrink: 0; /* Keeps circle perfect */
+/* FIXED hover */
+.profile-img:hover {
+  transform: scale(1.05) rotate(1deg);
 }
 
 .hero-text {
@@ -135,23 +103,16 @@ nav {
 
 .hero-text h1 {
   font-size: 70px;
-
   margin-bottom: 10px;
-
   font-family: "Times New Roman", Times, serif;
-
   font-weight: 400;
-
   text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
 }
 
 .hero-text p {
   font-size: 20px;
-
   color: #fef9f9;
-
   max-width: 600px;
-
   text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
 }
 
@@ -159,47 +120,34 @@ nav {
 
 .about {
   display: flex;
-
   justify-content: center;
 }
 
 .about-box {
   background: rgba(30, 41, 59, 0.8);
-
   backdrop-filter: blur(10px);
-
   padding: 40px 30px;
-
   max-width: 750px;
-
   border-radius: 20px;
-
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6);
-
   text-align: center;
-
   width: 95%;
-
   border: 1px solid rgba(56, 189, 248, 0.1);
 }
 
 .about-box h2 {
   color: #f9fbfc;
-
   margin-bottom: 20px;
-
   font-size: 32px;
 }
 
 .about-box p {
   line-height: 1.8;
-
   color: #e2e8f0;
-
   font-size: 17px;
 }
 
-/* ===== PROJECTS SECTION (Original Style) ===== */
+/* ===== PROJECTS ===== */
 
 .projects {
   text-align: center;
@@ -207,132 +155,110 @@ nav {
 
 .projects h2 {
   font-size: 36px;
-
   color: #ffffff;
-
   margin-bottom: 50px;
 }
 
 .project-container {
   display: flex;
-
   gap: 40px;
-
   justify-content: center;
-
   flex-wrap: wrap;
 }
 
 .project-card {
   background: rgba(30, 41, 59, 0.5);
-
   padding: 30px;
-
   width: 300px;
-
   border-radius: 20px;
-
   border: 1px solid rgba(56, 189, 248, 0.1);
-
   transition: all 0.4s ease;
-
   backdrop-filter: blur(10px);
-
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
+  position: relative;
+  overflow: hidden;
 }
 
 .project-card:hover {
   transform: translateY(-15px);
-
   background: rgba(51, 65, 85, 0.8);
-
   border: 1px solid rgba(56, 189, 248, 0.5);
+}
+
+.project-card::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: -100%;
+  background: linear-gradient(120deg, transparent, rgba(56,189,248,0.3), transparent);
+  transition: 0.5s;
+}
+
+.project-card:hover::after {
+  left: 100%;
 }
 
 .project-card h3 {
   color: #42dde5;
-
   margin-bottom: 15px;
 }
 
 .project-card img {
   width: 100%;
-
   border-radius: 12px;
-
   margin-bottom: 20px;
 }
 
-/* ===== CONTACT SECTION (Original Style) ===== */
+/* ===== CONTACT ===== */
 
 .contact {
   text-align: center;
-
   margin-top: 50px;
 }
 
 .contact h2 {
   color: #ffffff;
-
   margin-bottom: 30px;
 }
 
 .contact-box {
   display: flex;
-
   justify-content: center;
 }
 
-.contact form {
+/* FIXED FORM */
+form {
   background: rgba(15, 23, 42, 0.7);
-
   backdrop-filter: blur(12px);
-
   padding: 30px;
-
   border-radius: 15px;
-
   width: 350px;
-
   display: flex;
-
   flex-direction: column;
-
   gap: 18px;
-
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6);
 }
 
 .contact input,
 .contact textarea {
   width: 100%;
-
   padding: 12px;
-
   border-radius: 8px;
-
   border: none;
-
   background: #020617;
-
   color: white;
 }
 
 .contact button {
   padding: 12px;
-
   border: none;
-
   background: linear-gradient(135deg, #38bdf8, #0ea5e9);
-
   color: #020617;
-
   font-weight: bold;
-
   border-radius: 8px;
-
   cursor: pointer;
-
   transition: 0.3s;
 }
 
@@ -340,158 +266,107 @@ nav {
 
 footer {
   text-align: center;
-
   padding: 30px;
-
   background: #020617;
-
   color: #94a3b8;
 }
 
-/* ===== RESPONSIVE LOGIC ===== */
+/* ===== RESPONSIVE DESIGN (ADDED) ===== */
 
+/* Tablets */
+@media (max-width: 992px) {
+
+  .hero-text h1 {
+    font-size: 50px;
+  }
+
+  .profile-img {
+    width: 280px;
+    height: 280px;
+  }
+
+  .project-card {
+    width: 260px;
+  }
+}
+
+/* Phones */
 @media (max-width: 768px) {
+
   .hero-content {
     flex-direction: column;
-
     text-align: center;
-
     justify-content: center;
+    gap: 30px;
   }
 
   .hero-text {
     text-align: center;
   }
 
-  .profile-img {
-    width: 250px;
-
-    height: 250px;
-  }
-
   .hero-text h1 {
-    font-size: 40px;
-  }
-  /* Add this inside your @media (max-width: 768px) block */
-
-  /* 1. Show the hamburger icon */
-  .menu-btn {
-    display: block;
-    font-size: 30px;
-    color: white;
-    cursor: pointer;
-    z-index: 1001;
+    font-size: 38px;
   }
 
-  /* 2. Hide the links by default and style them as a mobile dropdown */
+  .hero-text p {
+    font-size: 16px;
+  }
+
+  .profile-img {
+    width: 220px;
+    height: 220px;
+  }
+
+  nav {
+    padding: 10px 20px;
+  }
+
   .nav-links {
-    display: none; 
-    position: absolute;
-    top: 100%; /* Sits right below the nav bar */
-    left: 0;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+  }
+
+  section {
+    padding: 70px 20px;
+  }
+
+  .project-card {
     width: 100%;
-    background: rgba(2, 6, 23, 0.95); /* Matches your nav color */
-    flex-direction: column;
-    padding: 20px 0;
-    text-align: center;
-    gap: 20px;
-    backdrop-filter: blur(15px);
-    border-bottom: 1px solid rgba(56, 189, 248, 0.2);
+    max-width: 320px;
   }
 
-  /* 3. THE MAGIC: When the checkbox is clicked, show the links */
-  #menu-toggle:checked ~ .nav-links {
-    display: flex;
+  form {
+    width: 100%;
+    max-width: 320px;
   }
 
-  /* 4. Hide the actual checkbox so it doesn't look ugly */
-  #menu-toggle {
-    display: none;
-  }
-  
-  /* 5. Fix background for mobile visibility */
   body {
     background-attachment: scroll !important;
   }
 }
-/* Add this inside your @media (max-width: 768px) block */
 
-  /* 1. Show the hamburger icon */
-  .menu-btn {
-    display: block;
+/* Small phones */
+@media (max-width: 480px) {
+
+  .hero-text h1 {
     font-size: 30px;
-    color: white;
-    cursor: pointer;
-    z-index: 1001;
   }
 
-  /* 2. Hide the links by default and style them as a mobile dropdown */
-  .nav-links {
-    display: none; 
-    position: absolute;
-    top: 100%; /* Sits right below the nav bar */
-    left: 0;
-    width: 100%;
-    background: rgba(2, 6, 23, 0.95); /* Matches your nav color */
-    flex-direction: column;
-    padding: 20px 0;
-    text-align: center;
-    gap: 20px;
-    backdrop-filter: blur(15px);
-    border-bottom: 1px solid rgba(56, 189, 248, 0.2);
+  .profile-img {
+    width: 180px;
+    height: 180px;
   }
 
-  /* 3. THE MAGIC: When the checkbox is clicked, show the links */
-  #menu-toggle:checked ~ .nav-links {
-    display: flex;
+  .logo {
+    font-size: 22px;
   }
 
-  /* 4. Hide the actual checkbox so it doesn't look ugly */
-  #menu-toggle {
-    display: none;
-  }
-  
-  /* 5. Fix background for mobile visibility */
-  body {
-    background-attachment: scroll !important;
-  }/* Add this inside your @media (max-width: 768px) block */
-
-  /* 1. Show the hamburger icon */
-  .menu-btn {
-    display: block;
-    font-size: 30px;
-    color: white;
-    cursor: pointer;
-    z-index: 1001;
+  .about-box h2 {
+    font-size: 26px;
   }
 
-  /* 2. Hide the links by default and style them as a mobile dropdown */
-  .nav-links {
-    display: none; 
-    position: absolute;
-    top: 100%; /* Sits right below the nav bar */
-    left: 0;
-    width: 100%;
-    background: rgba(2, 6, 23, 0.95); /* Matches your nav color */
-    flex-direction: column;
-    padding: 20px 0;
-    text-align: center;
-    gap: 20px;
-    backdrop-filter: blur(15px);
-    border-bottom: 1px solid rgba(56, 189, 248, 0.2);
+  .projects h2 {
+    font-size: 28px;
   }
-
-  /* 3. THE MAGIC: When the checkbox is clicked, show the links */
-  #menu-toggle:checked ~ .nav-links {
-    display: flex;
-  }
-
-  /* 4. Hide the actual checkbox so it doesn't look ugly */
-  #menu-toggle {
-    display: none;
-  }
-  
-  /* 5. Fix background for mobile visibility */
-  body {
-    background-attachment: scroll !important;
-  }
+}
