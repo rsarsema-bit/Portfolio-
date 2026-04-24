@@ -1,9 +1,8 @@
 
 
 
-
-
-/* ===== GLOBAL ===== */
+ 
+  /* ===== GLOBAL ===== */
 
 * {
   margin: 0;
@@ -92,7 +91,6 @@ nav {
   flex-shrink: 0;
 }
 
-/* FIXED hover */
 .profile-img:hover {
   transform: scale(1.05) rotate(1deg);
 }
@@ -116,7 +114,7 @@ nav {
   text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
 }
 
-/* ===== ABOUT SECTION ===== */
+/* ===== ABOUT ===== */
 
 .about {
   display: flex;
@@ -228,7 +226,6 @@ nav {
   justify-content: center;
 }
 
-/* FIXED FORM */
 form {
   background: rgba(15, 23, 42, 0.7);
   backdrop-filter: blur(12px);
@@ -271,26 +268,23 @@ footer {
   color: #94a3b8;
 }
 
-/* ===== RESPONSIVE DESIGN (ADDED) ===== */
+/* ========================= */
+/* ===== HAMBURGER MENU ===== */
+/* ========================= */
 
-/* Tablets */
-@media (max-width: 992px) {
-
-  .hero-text h1 {
-    font-size: 50px;
-  }
-
-  .profile-img {
-    width: 280px;
-    height: 280px;
-  }
-
-  .project-card {
-    width: 260px;
-  }
+#menu-toggle {
+  display: none;
 }
 
-/* Phones */
+.menu-btn {
+  display: none;
+  font-size: 32px;
+  color: white;
+  cursor: pointer;
+}
+
+/* ===== RESPONSIVE ===== */
+
 @media (max-width: 768px) {
 
   .hero-content {
@@ -321,10 +315,27 @@ footer {
     padding: 10px 20px;
   }
 
+  .menu-btn {
+    display: block;
+  }
+
   .nav-links {
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 15px;
+    display: none;
+    position: absolute;
+    top: 70px;
+    left: 0;
+    width: 100%;
+    flex-direction: column;
+    background: rgba(2, 6, 23, 0.95);
+    text-align: center;
+    padding: 20px 0;
+    gap: 20px;
+    backdrop-filter: blur(15px);
+    border-bottom: 1px solid rgba(56, 189, 248, 0.2);
+  }
+
+  #menu-toggle:checked ~ .nav-links {
+    display: flex;
   }
 
   section {
