@@ -315,7 +315,7 @@ footer {
     display: block;
   }
 
-  /* HIDE NAV LINKS BY DEFAULT */
+  /* NAV LINKS */
   .nav-links {
     display: none;
     position: absolute;
@@ -331,7 +331,7 @@ footer {
     border-bottom: 1px solid rgba(56, 189, 248, 0.2);
   }
 
-  /* SHOW WHEN CLICKED */
+  
   #menu-toggle:checked ~ .nav-links {
     display: flex;
   }
